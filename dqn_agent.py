@@ -33,8 +33,8 @@ class Agent():
         self.seed = random.seed(seed)
 
         # Q-Network
-        self.qnetwork_local = DQNetwork(self.state_size, self.action_size, seed).to(self.device)
-        self.qnetwork_target = DQNetwork(self.state_size, self.action_size, seed).to(self.device)
+        self.qnetwork_local = DQNetwork(self.state_size, self.action_size, seed).to(device)
+        self.qnetwork_target = DQNetwork(self.state_size, self.action_size, seed).to(device)
         
         self.optimizer = optim.Adam(self.qnetwork_local.parameters(), lr=LR)
 
@@ -43,7 +43,7 @@ class Agent():
         # Initialize time step (for updating every UPDATE_EVERY steps)
         self.t_step = 0
     
-    
+
     def step(self, state, action, reward, next_state, done):
         # Save experience in replay memory
         self.memory.add(state, action, reward, next_state, done)
@@ -110,7 +110,7 @@ class Agent():
 
         Params
         ======
-            local_model (PyTorch model): weights will be copied from
+            local_mode  l (PyTorch model): weights will be copied from
             target_model (PyTorch model): weights will be copied to
             tau (float): interpolation parameter 
         """
