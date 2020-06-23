@@ -34,3 +34,9 @@
 <p align="center">
     <img src="/images/test_video.gif" width=500>
 </P>
+
+## 4- Future works to improve the agent:
+
+- Using prioritized experience replay buffer
+- Using other algorithms, such as dueling Q networks, Rainbow
+- Further tuning hyperparameters 
