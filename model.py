@@ -18,9 +18,9 @@ class DQNetwork(nn.Module):
             ...
             ...
         """
-        fc1_units = 128
-        fc2_units = 128
-        fc3_units = 128
+        fc1_units = 256
+        fc2_units = 256
+        fc3_units = 64
     
         super(DQNetwork, self).__init__()
         self.seed = torch.manual_seed(seed)
